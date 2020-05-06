@@ -1,0 +1,105 @@
+Navigation:
+    - pwd: print working directory
+    - ls [option] [location]: list the files in current directory
+        * -l: list as a more expressive list
+        * -a: list ALL files, both hidden and unhidden
+    - cd[location]: change directory (with no input, gets you home)
+        * ..: parent
+        * .: current 
+        * ~: root 
+        * <dir>: transfers to selected child directory or an absolute directory
+        * '<dir>': if a directory breaks with a space, use quotes to cd to it
+
+
+Creating and working files:
+    - touch: creates a file
+        ! creating files with a . in front of file names will create a hidden file or directory
+    - mkdir: create a directory
+    - file: returns the type of file
+    - rm [options] <file>: removes the specified file in the directory
+    - rmdir [options] <dir>: removes a directory
+    - cp [options] <source> <destination>: copies a file or directory
+        * -r: copy directories
+    - mv [options] <source> <destination>: moves a file or directory (no need for the -r option)
+        ! if the specified destination is the same as that of the file/directory at source, then that file/directory will be renamed
+
+
+Wildcards:
+    - *: zero or more characters
+        - b*: lists every file beginning with a b
+        - *.txt: lists every file ending with a .txt file 
+    - ?: single character
+        - *.???: all files with a 3 character type
+    - []: range of characters
+
+Permissions(r-read, w-write, x-execute):
+    - ls -l [path]: view files with permissions listed
+    - chmod [permissions] [path]: change permission
+        - u/g/o/a: user, group, others, all
+        - +/-: granting or revoking permission
+        - r/w/x: permission setting 
+    - 
+
+Filters:
+    - cat [file]: print the content of the file first line to last
+    - tac [file]: print the content of the file last line to first
+    - head -n [file]: print the first n lines of the file (default is 10)
+    - tail -n [file]: print the last n lines of the file (default is 10)
+    - sort [-options] [path]: print the contents in an alphabetically sorted way
+    - nl [-options] [path]: print number lines before each line
+    - wc [-options] [path]: returns word count of the file (word count, character count, line count)
+        * -l: lines only
+        * -w: words only
+        * -c: characters only
+    - cut [-options] [path]: returns only certain fields of the file
+    - sed <expression> [path]: search and replace the data
+    - egrep [-options] <pattern> [path]: prints only those lines that contain the inputted pattern
+        * -n: will also return the line number at which the match has been spotted
+        * -c: will return the amount of lines that had matched
+
+Piping and redirection:
+
+    Every program that is ran on the command line has three data streams connected to it:
+    1) STDIN - standard input
+        - use '<'
+    2) STDOUT - standard output
+        - use '>' to direct the output of a command to a specific file
+        - use '>>' to append new data to a file
+    3) STDERR - standard error
+        - use '2>'
+    
+    Piping:
+        - use '|'
+
+Process Management
+    - top: prints out a dynamic list of current processeses and their properties
+    - kill [signal] <PID>: kills a process with a certain PID
+        * -9: force kill signal
+    - sleep [time] [background or no]: executes an empty command for the selected time  
+        * &: will run the sleep command in the background for the selected time
+
+
+Bash scripting: 
+
+Anything you can run on the command line you may place into a script and they will behave exactly the same. 
+Anything you can put into a script, you may run on the command line and it will perform exactly the same.
+
+1) Create an empty file and introduce some cmdLn commands inside the file
+2) Call the file by ./<file name and type>
+
+Variables:
+    - Declare with '=' 
+    - Call with $<VariableName>
+    - default:
+        - $0: script name
+        - $1-$9: command line arguments 1 through 9
+        - $#: the amount of command line arguments
+        - $*: prints out all command line arguments
+If statements: if[]then else fi
+
+
+
+Other:
+    - man[command]: returns the manual of a specific command 
+
+    

@@ -1,0 +1,5 @@
+#!/bin/bash
+# Andranik 06/20
+
+echo Here are the files in this current directory:
+ls

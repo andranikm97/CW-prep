@@ -1,0 +1,55 @@
+
+no \ -- simple character
+\ -- metacharacter
+
+\s - any whitespace character (such as space, tab (\t), new line (\n), and carriage return (\r))
+\S - any non-whitespace character
+\w any alphanumeric character
+\W any non-alphanumeric character
+\d any digit from 0 to 9 (single!)
+\D any non-digit character (single)
+. wildcard - match any given character
+\. match a period
+\? match a question mark
+
+[abc] - will only match a single a, b, or c letter and nothing else
+[^abc] - will match anything but the characters inside the brackets
+
+[A-C] - matches any pattern containing any letter in range from A to C
+[a-c] - matches any pattern containing any letter in range from a to c
+[0-5] - matches any pattern containing any letter in range from 0 to 5
+[^A-C] - matches any pattern not containing any letter in range from A to C
+
+(file.+) - matches a group of characters containing file and 1 or more of any character
+(\w+ (\d+)) - matches a group of word charcters with a subgroup of digits after a space
+
+a{3}  - matches any string containing 3 consecutive 'a's
+[xyz]{3} - matches any string containing 3 consecutive letters in a range from x, y and z
+
+a+ - there is 1 or more 'a' in the string
+a* - 0 or more 'a' in the string
+
+ab?c - will match either 'abc' or 'ac'
+(abc|khq) - match either a sequence of characters abc OR khq
+
+^ - begins with
+    - ^success --> will only match a string starting with the word "success"
+$ - ends with
+
+JAVASCRIPT implementation
+
+initiate: var re = new RegExp(<expression>)
+          var regex = ("/...../")
+
+Methods:
+    - .test() --> test whether the regular expression matches a specific string in a given variable
+    - .exec() --> extract info from the string based on the RegExp
+    - .match() --> returns the result of a matching string against the regex in an array format
+    - .search() --> executes a search for a match between regex and string, returns the first case of regex
+    - .replace(regex, replacing string) --> replaces matched string with a new given string  
+
+Flags (used at the end of the regular expression, or in the declaration of the RegExp object as second input):
+    - g --> allows to run RegExp.exec() multiple times in the literal notation in the input string until the method returns null
+    - i --> makes the pattern case insensitive
+    - m --> necessary if string contains any new line elements (\n); this flag allows ^ and $ to match at the beginning and end of each line, not the whole string
+    - u --> interpret regular expression as a unicode codepoints

@@ -1,0 +1,24 @@
+2 main methods: Insert and Edit
+
+Shell commands:
+    - initialization: vi <filename>
+    - viewing contents: cat <file>
+    - viewing contents of a large file: less <file> (move with a space bar)
+
+COMMANDS
+
+Inserting
+    - Press i to start inserting
+Saving:
+    - ZZ : save and exit
+    - :q! : discard all changes since the last save and exit
+    - :w : save file but don't exit
+    - :wq : save and exit
+Editing:
+    - G: move to the last line
+    - w: move to the beginning of the next word
+    - $: move cursor to the end of the current line
+    - x: delete a character
+    - nx: delete n characters
+    - dd: delete the current line
+    - u: undo the last action

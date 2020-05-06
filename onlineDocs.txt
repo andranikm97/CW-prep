@@ -1,0 +1,6 @@
+MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+SO: http://stackoverflow.com/
+jquery: https://api.jquery.com/
+W3S: https://www.w3schools.com/
+
+

@@ -1,0 +1,12 @@
+Select by increment: shift+arrows
+Select by line: shift+cmd+arrows(right and left)
+Select by section: shift+cmd+arrows(down and up)
+
+Indent code: tab
+Undindent code: shift+tab
+
+Comment code: cmd+/
+Uncomment code: cmd+/ (on commented code)
+
+Execute code: ^+opt+n
+Use advanced search (string replacementn): cmd+f

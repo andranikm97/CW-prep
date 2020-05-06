@@ -1,0 +1,3 @@
+Here we go!
+
+This is my first document in VIM, how exciting, isn't it!
